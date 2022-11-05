@@ -33,7 +33,11 @@ namespace Crafting.Storage {
 
         public void Increase(CraftingItem craftingItem, long amount = 1)
         {
-            _inventory[craftingItem] += amount;
+            if (_inventory.ContainsKey(craftingItem))
+                _inventory[craftingItem] += amount;
+            else
+                _inventory[craftingItem] = amount;
+            
             StorageUpdated.Invoke(craftingItem);
         }
 
