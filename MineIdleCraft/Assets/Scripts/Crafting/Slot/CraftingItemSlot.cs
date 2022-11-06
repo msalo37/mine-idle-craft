@@ -1,5 +1,6 @@
 using System;
 using Crafting.Storage;
+using TipBox;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,7 +10,7 @@ using UnityEngine.UI;
 
 namespace Crafting.Slot
 {
-    public class CraftingItemSlot : MonoBehaviour, IPointerClickHandler
+    public class CraftingItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private CraftingItem craftingItem;
         [Space] [SerializeField] private Image icon;
@@ -17,6 +18,7 @@ namespace Crafting.Slot
 
         [Inject] private ItemStorage _storage;
         [Inject] private Crafter _crafter;
+        [Inject] private TipMessageBoxController _tipMessageBox;
 
         public UnityEvent OnSlotClicked;
 
@@ -59,6 +61,16 @@ namespace Crafting.Slot
             if (_crafter == null) throw new NullReferenceException("Crafter is null!");
             OnSlotClicked?.Invoke();
             _crafter.TryToCraft(craftingItem);
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            _tipMessageBox.ShowMessage(craftingItem);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            _tipMessageBox.HideMessage();
         }
     }
 }
