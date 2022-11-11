@@ -14,7 +14,7 @@ namespace TipPanel
         public void SetCraftingItem(CraftingItem craftingItem)
         {
             ClearSlots();
-            title.text = craftingItem.name + $"({craftingItem.recipe.getAmount} pcs)";
+            title.text = craftingItem.name + " -> " + craftingItem.recipe.getAmount;
             foreach (var recipeItem in craftingItem.recipe.resources)
             {
                 TipCraftingSlotUI craftingSlotUI = Instantiate(slotPrefab, slotParent);
