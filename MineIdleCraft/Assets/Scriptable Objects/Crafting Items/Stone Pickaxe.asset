@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271f88d62817d3a41b27d5f884d42d2b, type: 3}
+  m_Name: Stone Pickaxe
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 64e6d3c122b6767479cb5444b4707f29, type: 3}
+  recipe:
+    resources:
+    - craftingItem: {fileID: 11400000, guid: 3416ee1457ea3d94b9034bcbd2fb2851, type: 2}
+      amount: 2
+      consume: 1
+    - craftingItem: {fileID: 11400000, guid: ac0a46ba2bad021498662e0293310aac, type: 2}
+      amount: 3
+      consume: 1
+    - craftingItem: {fileID: 11400000, guid: 29641673d5489964abd5559ebf41d537, type: 2}
+      amount: 1
+      consume: 0
+    getAmount: 1
