@@ -1,27 +1,28 @@
 using Crafting;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace TipBox
+namespace TipPanel
 {
-    public class TipMessageBox : MonoBehaviour
+    public class TipMessagePanelUI : MonoBehaviour
     {
         [SerializeField] private TMP_Text title;
-        [SerializeField] private TipCraftingItemSlot slotPrefab;
+        [SerializeField] private TipCraftingSlotUI slotPrefab;
         [SerializeField] private Transform slotParent;
 
         public void SetCraftingItem(CraftingItem craftingItem)
         {
-            ClearSlotParent();
+            ClearSlots();
             title.text = craftingItem.name + $"({craftingItem.recipe.getAmount} pcs)";
             foreach (var recipeItem in craftingItem.recipe.resources)
             {
-                TipCraftingItemSlot craftingSlot = Instantiate(slotPrefab, slotParent);
-                craftingSlot.SetRecipeItem(recipeItem);
+                TipCraftingSlotUI craftingSlotUI = Instantiate(slotPrefab, slotParent);
+                craftingSlotUI.SetRecipeItem(recipeItem);
             }
         }
 
-        private void ClearSlotParent()
+        private void ClearSlots()
         {
             if (slotParent.childCount == 0) return;
             foreach (Transform child in slotParent)

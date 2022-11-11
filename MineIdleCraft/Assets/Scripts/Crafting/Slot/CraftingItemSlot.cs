@@ -1,6 +1,6 @@
 using System;
 using Crafting.Storage;
-using TipBox;
+using TipPanel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -18,7 +18,7 @@ namespace Crafting.Slot
 
         [Inject] private ItemStorage _storage;
         [Inject] private Crafter _crafter;
-        [Inject] private TipMessageBoxController _tipMessageBox;
+        [Inject] private TipMessagePanelController _tipMessagePanel;
 
         public UnityEvent OnSlotClicked;
 
@@ -65,12 +65,12 @@ namespace Crafting.Slot
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            _tipMessageBox.ShowMessage(craftingItem);
+            _tipMessagePanel.ShowMessage(craftingItem);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            _tipMessageBox.HideMessage();
+            _tipMessagePanel.HideMessage();
         }
     }
 }

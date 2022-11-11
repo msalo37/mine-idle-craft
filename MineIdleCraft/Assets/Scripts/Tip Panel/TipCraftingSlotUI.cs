@@ -3,9 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TipBox
+namespace TipPanel
 {
-    public class TipCraftingItemSlot : MonoBehaviour
+    public class TipCraftingSlotUI : MonoBehaviour
     {
         [SerializeField] private TMP_Text titleAmount;
         [SerializeField] private Image icon;
