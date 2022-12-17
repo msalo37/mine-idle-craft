@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271f88d62817d3a41b27d5f884d42d2b, type: 3}
-  m_Name: Oak Log
+  m_Script: {fileID: 11500000, guid: 4fd914311bba4023b9f005bc7e6786ed, type: 3}
+  m_Name: Oak Planks
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: db9b1397271cd7c46baeab0b5e1abbd2, type: 3}
-  recipe:
+  sprite: {fileID: 21300000, guid: aa11218cec3e78d4e8a2f03279f5b220, type: 3}
+  craftingRecipe:
     resources: []
-    getAmount: 1
+    getAmount: 4

@@ -1,4 +1,4 @@
-using Crafting;
+using Materials;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +12,7 @@ namespace TipPanel
 
         public void SetRecipeItem(RecipeItem recipeItem)
         {
-            icon.sprite = recipeItem.craftingItem.icon;
+            icon.sprite = recipeItem.craftingItem.sprite;
             titleAmount.text = recipeItem.amount.ToString();
         }
     }

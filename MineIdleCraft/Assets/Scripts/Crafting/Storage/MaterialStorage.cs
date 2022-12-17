@@ -1,37 +1,38 @@
 using System;
 using System.Collections.Generic;
+using Materials;
 
 namespace Crafting.Storage {
 
-    public class ItemStorage
+    public class MaterialStorage
     {
-        private readonly Dictionary<CraftingItem, long> _inventory;
-        public Dictionary<CraftingItem, long> Data => _inventory;
-        public Action<CraftingItem> StorageUpdated;
+        private readonly Dictionary<BaseMaterial, long> _inventory;
+        public Dictionary<BaseMaterial, long> Data => _inventory;
+        public Action<BaseMaterial> StorageUpdated;
         
-        public ItemStorage()
+        public MaterialStorage()
         {
-            _inventory = new Dictionary<CraftingItem, long>();
+            _inventory = new Dictionary<BaseMaterial, long>();
         }
 
-        public ItemStorage(Dictionary<CraftingItem, long> savedData)
+        public MaterialStorage(Dictionary<BaseMaterial, long> savedData)
         {
             _inventory = savedData;
         }
 
-        public bool Have(CraftingItem craftingItem, long amount = 1)
+        public bool Have(BaseMaterial craftingItem, long amount = 1)
         {
             if (_inventory.ContainsKey(craftingItem) == false) return false;
             return _inventory[craftingItem] >= amount;
         }
 
-        public long GetAmount(CraftingItem craftingItem)
+        public long GetAmount(BaseMaterial craftingItem)
         {
             if (_inventory.ContainsKey(craftingItem)) return _inventory[craftingItem];
             return 0;
         }
 
-        public void Increase(CraftingItem craftingItem, long amount = 1)
+        public void Increase(BaseMaterial craftingItem, long amount = 1)
         {
             if (_inventory.ContainsKey(craftingItem))
                 _inventory[craftingItem] += amount;
@@ -41,7 +42,7 @@ namespace Crafting.Storage {
             StorageUpdated.Invoke(craftingItem);
         }
 
-        public bool TryToDecrease(CraftingItem craftingItem, long amount = 1)
+        public bool TryToDecrease(BaseMaterial craftingItem, long amount = 1)
         {
             if (Have(craftingItem, amount) == true)
             {

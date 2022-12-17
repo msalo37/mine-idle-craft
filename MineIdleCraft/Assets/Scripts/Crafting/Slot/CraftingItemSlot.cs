@@ -1,5 +1,6 @@
 using System;
 using Crafting.Storage;
+using Materials;
 using TipPanel;
 using TMPro;
 using UnityEngine;
@@ -12,11 +13,11 @@ namespace Crafting.Slot
 {
     public class CraftingItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
-        [SerializeField] private CraftingItem craftingItem;
+        [SerializeField] private CraftableMaterial craftableMaterial;
         [Space] [SerializeField] private Image icon;
         [SerializeField] private TMP_Text titleAmount;
 
-        [Inject] private ItemStorage _storage;
+        [Inject] private MaterialStorage _storage;
         [Inject] private Crafter _crafter;
         [Inject] private TipMessagePanelController _tipMessagePanel;
 
@@ -24,9 +25,9 @@ namespace Crafting.Slot
 
         private void OnValidate()
         {
-            if (craftingItem == null) return;
-            if (craftingItem.icon == null) return;
-            icon.sprite = craftingItem.icon;
+            if (craftableMaterial == null) return;
+            if (craftableMaterial.sprite == null) return;
+            icon.sprite = craftableMaterial.sprite;
         }
 
         private void Awake()
@@ -45,27 +46,27 @@ namespace Crafting.Slot
             _storage.StorageUpdated -= OnStorageUpdated;
         }
 
-        private void OnStorageUpdated(CraftingItem item)
+        private void OnStorageUpdated(BaseMaterial item)
         {
-            if (item != craftingItem) return;
+            if (item != craftableMaterial) return;
             UpdateTextAmount();
         }
 
         private void UpdateTextAmount()
         {
-            titleAmount.text = _storage.GetAmount(craftingItem).ToString();
+            titleAmount.text = _storage.GetAmount(craftableMaterial).ToString();
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
             if (_crafter == null) throw new NullReferenceException("Crafter is null!");
             OnSlotClicked?.Invoke();
-            _crafter.TryToCraft(craftingItem);
+            _crafter.TryToCraft(craftableMaterial);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            _tipMessagePanel.ShowMessage(craftingItem);
+            _tipMessagePanel.ShowMessage(craftableMaterial);
         }
 
         public void OnPointerExit(PointerEventData eventData)

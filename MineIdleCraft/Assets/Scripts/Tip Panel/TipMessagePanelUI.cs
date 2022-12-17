@@ -1,7 +1,6 @@
-using Crafting;
+using Materials;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace TipPanel
 {
@@ -11,11 +10,11 @@ namespace TipPanel
         [SerializeField] private TipCraftingSlotUI slotPrefab;
         [SerializeField] private Transform slotParent;
 
-        public void SetCraftingItem(CraftingItem craftingItem)
+        public void SetCraftingItem(CraftableMaterial craftableMaterial)
         {
             ClearSlots();
-            title.text = craftingItem.name + " -> " + craftingItem.recipe.getAmount;
-            foreach (var recipeItem in craftingItem.recipe.resources)
+            title.text = craftableMaterial.name + " -> " + craftableMaterial.craftingRecipe.getAmount;
+            foreach (var recipeItem in craftableMaterial.craftingRecipe.resources)
             {
                 TipCraftingSlotUI craftingSlotUI = Instantiate(slotPrefab, slotParent);
                 craftingSlotUI.SetRecipeItem(recipeItem);

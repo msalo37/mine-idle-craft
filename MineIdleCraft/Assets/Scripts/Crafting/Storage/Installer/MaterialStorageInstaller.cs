@@ -2,11 +2,11 @@ using Zenject;
 
 namespace Crafting.Storage.Installer
 {
-    public class ItemStorageInstaller : MonoInstaller
+    public class MaterialStorageInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
-            Container.Bind<ItemStorage>().AsSingle().NonLazy();
+            Container.Bind<MaterialStorage>().AsSingle().NonLazy();
         }
     }
 }

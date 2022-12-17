@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Crafting;
-using TipPanel;
+using Materials;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace TipPanel
 {
@@ -24,10 +19,10 @@ namespace TipPanel
             panelRectTransform.position = Input.mousePosition + offset;
         }
 
-        public void ShowMessage(CraftingItem craftingItem)
+        public void ShowMessage(CraftableMaterial craftingMaterial)
         {
             _isHided = false;
-            panel.SetCraftingItem(craftingItem);
+            panel.SetCraftingItem(craftingMaterial);
             panel.gameObject.SetActive(true);
         }
 
