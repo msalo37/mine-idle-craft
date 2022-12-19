@@ -8,12 +8,18 @@ namespace Materials
     public class MineableMaterial : BaseMaterial
     {
         public MineRecipe mineRecipe;
+
+        private void Awake()
+        {
+            mineRecipe.toolsToMine.Sort((a,b) => a.mineDuration.CompareTo(b.mineDuration));
+        }
     }
     
     [Serializable]
     public class MineRecipe
     {
         public List<MiningToolRecipe> toolsToMine;
+        public long getAmount = 1;
     }
 
     [Serializable]

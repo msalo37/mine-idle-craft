@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: aa11218cec3e78d4e8a2f03279f5b220, type: 3}
   craftingRecipe:
-    resources: []
+    resources:
+    - craftingItem: {fileID: 11400000, guid: 4c6137d15ae5e084598f92d31ba67484, type: 2}
+      amount: 1
+      consume: 1
     getAmount: 4
