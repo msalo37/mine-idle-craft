@@ -28,6 +28,7 @@ namespace Crafting.Slot
             if (craftableMaterial == null) return;
             if (craftableMaterial.sprite == null) return;
             icon.sprite = craftableMaterial.sprite;
+            gameObject.name = $"Crafting Slot ({craftableMaterial.name})";
         }
 
         private void Awake()

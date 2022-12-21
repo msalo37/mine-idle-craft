@@ -21,6 +21,7 @@ namespace Crafting.Slot
             if (material == null) return;
             if (material.sprite == null) return;
             icon.sprite = material.sprite;
+            gameObject.name = $"Material slot ({material.name})";
         }
 
         private void Awake()
