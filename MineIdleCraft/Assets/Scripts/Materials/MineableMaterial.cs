@@ -7,6 +7,8 @@ namespace Materials
     [CreateAssetMenu(menuName = "Scriptable Objects/Materials/Mineable Material", fileName = "New mining material")]
     public class MineableMaterial : BaseMaterial
     {
+        [Tooltip("This sprite will be shown during mining.")]
+        public Sprite mineSprite;
         public MineRecipe mineRecipe;
 
         private void Awake()

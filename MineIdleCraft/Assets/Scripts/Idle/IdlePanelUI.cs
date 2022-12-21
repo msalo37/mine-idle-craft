@@ -33,9 +33,9 @@ namespace Idle
                 HideMaterial();
                 return;
             }
-            BaseMaterial mat = idlePanel.CurrentMaterial.Key;
+            MineableMaterial mat = idlePanel.CurrentMaterial.Key;
             materialIcon.color = Color.white;
-            materialIcon.sprite = mat.sprite;
+            materialIcon.sprite = mat.mineSprite == null ? mat.sprite : mat.mineSprite;
             materialTitle.text = mat.name;
         }
 
