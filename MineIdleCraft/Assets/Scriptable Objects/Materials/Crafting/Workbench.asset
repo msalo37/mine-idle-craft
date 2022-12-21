@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd914311bba4023b9f005bc7e6786ed, type: 3}
+  m_Name: Workbench
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 2b337aa03a0c8b947977f92e23d23f8c, type: 3}
+  craftingRecipe:
+    resources:
+    - craftingItem: {fileID: 11400000, guid: f21340e3bf8e87f4ebabba902772d17c, type: 2}
+      amount: 4
+      consume: 1
+    getAmount: 1
