@@ -45,6 +45,7 @@ namespace Idle
 
         public void StartMine()
         {
+            if (_isMining == true) return;
             StartIdle?.Invoke();
             _isMining = true;
             _timer = 0;
