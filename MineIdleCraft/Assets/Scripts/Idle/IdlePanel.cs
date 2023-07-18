@@ -13,58 +13,55 @@ namespace Idle
         [SerializeField] private MineableMaterial[] materials;
         
         private readonly List<KeyValuePair<MineableMaterial, MiningToolRecipe>> _availableMaterials = new();
-        private KeyValuePair<MineableMaterial, MiningToolRecipe> _currentMaterial;
-        private bool _isMining;
         private float _timer;
         
         [Inject] private MaterialStorage _storage;
 
-        public KeyValuePair<MineableMaterial, MiningToolRecipe> CurrentMaterial => _currentMaterial;
-        public float MiningPercent => _timer / _currentMaterial.Value?.mineDuration ?? 0;
-        public bool IsMining => _isMining;
-        
-        public UnityEvent MaterialUpdated;
+        public KeyValuePair<MineableMaterial, MiningToolRecipe> CurrentMaterial { private set; get; }
+        public float MiningPercent => _timer / CurrentMaterial.Value?.mineDuration ?? 0;
+        public bool IsMining { private set; get; }
+
+        public UnityEvent<MineableMaterial> MaterialUpdate;
         public UnityEvent StartIdle;
 
         private void Awake()
         {
             OnStorageUpdated(null);
-            _currentMaterial = GetRandomAvailableMaterial();
-            MaterialUpdated?.Invoke();
+            CurrentMaterial = GetRandomAvailableMaterial();
+            MaterialUpdate?.Invoke(CurrentMaterial.Key);
         }
 
         private void Update()
         {
-            if (_isMining == false) return;
-            if (_currentMaterial.Key == null) return;
+            if (IsMining == false) return;
+            if (CurrentMaterial.Key == null) return;
             
             _timer += Time.deltaTime;
-            if (_timer >= _currentMaterial.Value.mineDuration) 
+            if (_timer >= CurrentMaterial.Value.mineDuration) 
                 EndMining();
         }
 
         public void StartMine()
         {
-            if (_isMining == true) return;
+            if (IsMining == true) return;
             StartIdle?.Invoke();
-            _isMining = true;
+            IsMining = true;
             _timer = 0;
         }
 
         private void EndMining()
         {
-            _isMining = false;
+            IsMining = false;
             _timer = 0;
 
-            _storage.Increase(_currentMaterial.Key, _currentMaterial.Key.mineRecipe.getAmount);
-            _currentMaterial = GetRandomAvailableMaterial();
-            MaterialUpdated?.Invoke();
+            _storage.Increase(CurrentMaterial.Key, CurrentMaterial.Key.mineRecipe.getAmount);
+            CurrentMaterial = GetRandomAvailableMaterial();
+            MaterialUpdate?.Invoke(CurrentMaterial.Key);
         }
 
         private KeyValuePair<MineableMaterial, MiningToolRecipe> GetRandomAvailableMaterial()
         {
-            if (_availableMaterials.Count == 0)
-                return new KeyValuePair<MineableMaterial, MiningToolRecipe>(null, null);
+            if (_availableMaterials.Count == 0) return default;
             return _availableMaterials[Random.Range(0, _availableMaterials.Count)];
         }
 
@@ -86,10 +83,10 @@ namespace Idle
                 if (CanBeMined(mat.mineRecipe, out var tool))
                     _availableMaterials.Add(new KeyValuePair<MineableMaterial, MiningToolRecipe>(mat, tool));
 
-            if (_currentMaterial.Key == null && _availableMaterials.Count > 0)
+            if (CurrentMaterial.Key == null && _availableMaterials.Count > 0)
             {
-                _currentMaterial = GetRandomAvailableMaterial();
-                MaterialUpdated?.Invoke();
+                CurrentMaterial = GetRandomAvailableMaterial();
+                MaterialUpdate?.Invoke(CurrentMaterial.Key);
             }
         }
 

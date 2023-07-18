@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Materials;
 using TMPro;
 using UnityEngine;
@@ -25,18 +23,17 @@ namespace Idle
             progressBar.fillAmount = idlePanel.MiningPercent;
         }
 
-        public void OnMaterialUpdated()
+        public void OnMaterialUpdated(MineableMaterial mineableMaterial)
         {
             progressBar.fillAmount = 0;
-            if (idlePanel.CurrentMaterial.Key == null)
+            if (mineableMaterial == null)
             {
                 HideMaterial();
                 return;
             }
-            MineableMaterial mat = idlePanel.CurrentMaterial.Key;
             materialIcon.color = Color.white;
-            materialIcon.sprite = mat.mineSprite == null ? mat.sprite : mat.mineSprite;
-            materialTitle.text = mat.name;
+            materialIcon.sprite = mineableMaterial.mineSprite == null ? mineableMaterial.sprite : mineableMaterial.mineSprite;
+            materialTitle.text = mineableMaterial.name;
         }
 
         private void HideMaterial()

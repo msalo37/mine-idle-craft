@@ -353,13 +353,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materials:
   - {fileID: 11400000, guid: 4c6137d15ae5e084598f92d31ba67484, type: 2}
-  MaterialUpdated:
+  MaterialUpdate:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 113381345}
         m_TargetAssemblyTypeName: Idle.IdlePanelUI, Assembly-CSharp
         m_MethodName: OnMaterialUpdated
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3730,13 +3730,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 703a18c44c7e0dd4a8a3cc296f02dca6, type: 2}
   - {fileID: 11400000, guid: e4945a1161cc48a44bf490a9194268dc, type: 2}
   - {fileID: 11400000, guid: cc7744ffb204b414a89ededcbc148e7d, type: 2}
-  MaterialUpdated:
+  MaterialUpdate:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1915213820}
         m_TargetAssemblyTypeName: Idle.IdlePanelUI, Assembly-CSharp
         m_MethodName: OnMaterialUpdated
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
