@@ -14,7 +14,7 @@ namespace Crafting
             foreach (var recipeItem in craftableMaterial.craftingRecipe.resources)
             {
                 if (recipeItem.consume) 
-                    _storage.TryToDecrease(recipeItem.craftingItem, recipeItem.amount);
+                    _storage.TryToDecrease(recipeItem.material, recipeItem.amount);
             }
             _storage.Increase(craftableMaterial, craftableMaterial.craftingRecipe.getAmount);
             return true;
@@ -24,7 +24,7 @@ namespace Crafting
         {
             foreach (var recipeItem in craftableMaterial.craftingRecipe.resources)
             {
-                if (_storage.Have(recipeItem.craftingItem, recipeItem.amount) == false)
+                if (_storage.Have(recipeItem.material, recipeItem.amount) == false)
                     return false;
             }
             return true;

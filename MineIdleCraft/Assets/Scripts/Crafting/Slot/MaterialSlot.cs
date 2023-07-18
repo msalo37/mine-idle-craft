@@ -10,13 +10,13 @@ namespace Crafting.Slot
 {
     public class MaterialSlot : MonoBehaviour
     {
-        [SerializeField] private BaseMaterial material;
+        [SerializeField] protected BaseMaterial material;
         [Space] [SerializeField] private Image icon;
         [SerializeField] private TMP_Text titleAmount;
 
-        [Inject] private MaterialStorage _storage;
+        [Inject] protected MaterialStorage _storage;
 
-        private void OnValidate()
+        protected virtual void OnValidate()
         {
             if (material == null) return;
             if (material.sprite == null) return;
@@ -24,18 +24,18 @@ namespace Crafting.Slot
             gameObject.name = $"Material slot ({material.name})";
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             if (_storage != null) UpdateTextAmount();
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             if (_storage == null) throw new NullReferenceException("Item Storage is null!");
             _storage.StorageUpdated += OnStorageUpdated;
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
             _storage.StorageUpdated -= OnStorageUpdated;
         }

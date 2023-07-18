@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e0b3e5c22b952fb439fb40dfb50bb0c3, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Stone Hoe)
+      value: Material slot (Stone Hoe)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 371e9d81870b1c242b05c80319be88aa, type: 2}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
@@ -436,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 61334522d22091845b257dfca53bf859, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Wooden Pickaxe)
+      value: Material slot (Wooden Pickaxe)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -522,6 +526,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: fe6405217f0229e4194f8c68c8a86398, type: 2}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
@@ -627,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 187e89cba2296e843baef806493bb788, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Stone Sword)
+      value: Material slot (Stone Sword)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -713,6 +721,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 0dc5549beb93fc945b56657371848315, type: 2}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
@@ -1717,10 +1729,10 @@ PrefabInstance:
     - target: {fileID: 1235306831347538473, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2b337aa03a0c8b947977f92e23d23f8c, type: 3}
+      objectReference: {fileID: 21300000, guid: 5cc75d9543bfce848bf10a2ba9a24ad7, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Stick)
+      value: Material slot (Stick)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -1807,6 +1819,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 177c0e04446e2c141a31ab0869a32de1, type: 2}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
       objectReference: {fileID: 11400000, guid: ae139aea6739ad644943813ceab5628d, type: 2}
@@ -1834,7 +1850,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5cc75d9543bfce848bf10a2ba9a24ad7, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Wooden Sword)
+      value: Material slot (Wooden Sword)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -1921,6 +1937,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c490e8bea1729248ab0288cb897cb62, type: 2}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
       objectReference: {fileID: 11400000, guid: ae139aea6739ad644943813ceab5628d, type: 2}
@@ -1948,7 +1968,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ec58a575f0ff29f479adb778b08d69c1, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Stone Shovel)
+      value: Material slot (Stone Shovel)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -2034,6 +2054,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cd9ea152af7235478d18d37e608c728, type: 2}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
@@ -2364,7 +2388,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 344c8b1859ecf68478957ccb7c8825ba, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Iron Ingot)
+      value: Material slot (Iron Ingot)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -2451,6 +2475,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: d8076da442f31024291fab79f9813158, type: 2}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
       objectReference: {fileID: 11400000, guid: ae139aea6739ad644943813ceab5628d, type: 2}
@@ -2478,7 +2506,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 27427b36501039a4c9259ba21dcdceae, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Wooden Axe)
+      value: Material slot (Wooden Axe)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -2564,6 +2592,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a6fecf65bbbd8a46b6e711f30176ccf, type: 2}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
@@ -2665,10 +2697,10 @@ PrefabInstance:
     - target: {fileID: 1235306831347538473, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aa11218cec3e78d4e8a2f03279f5b220, type: 3}
+      objectReference: {fileID: 21300000, guid: 2b337aa03a0c8b947977f92e23d23f8c, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Workbench)
+      value: Material slot (Workbench)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -2755,6 +2787,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 06c4f1c4f7bccb34dbee1770e3ba154e, type: 2}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
       objectReference: {fileID: 11400000, guid: ae139aea6739ad644943813ceab5628d, type: 2}
@@ -2782,7 +2818,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0a5d2cb35a7617d4486eddcf9f9036b2, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Stone Pickaxe)
+      value: Material slot (Stone Pickaxe)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -2869,6 +2905,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f14de7b93d5802428343143c802ef61, type: 2}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
       objectReference: {fileID: 11400000, guid: ae139aea6739ad644943813ceab5628d, type: 2}
@@ -2896,7 +2936,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: dbf37a74bd4368b43b0c05192b6807f1, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Wooden Hoe)
+      value: Material slot (Wooden Hoe)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -2983,6 +3023,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: c5bddb1f9f95a0d4ca5c516290d13c01, type: 2}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
       objectReference: {fileID: 11400000, guid: ae139aea6739ad644943813ceab5628d, type: 2}
@@ -3010,7 +3054,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d4574f578c1e9b243ab6b233597907ef, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Furnace)
+      value: Material slot (Furnace)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -3097,6 +3141,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 34d180237ea182048abd802c06099e0d, type: 2}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
       objectReference: {fileID: 11400000, guid: ae139aea6739ad644943813ceab5628d, type: 2}
@@ -3124,7 +3172,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 64e6d3c122b6767479cb5444b4707f29, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Stone Axe)
+      value: Material slot (Stone Axe)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -3210,6 +3258,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: 9331c5ae112985446bd82a17f2566a55, type: 2}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
@@ -3497,7 +3549,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 61334522d22091845b257dfca53bf859, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Wooden Shovel)
+      value: Material slot (Wooden Shovel)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -3583,6 +3635,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: ed39091cc9c313f48949026583fc7635, type: 2}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 
@@ -4035,9 +4091,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 497361803}
     m_Modifications:
+    - target: {fileID: 1235306831347538473, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aa11218cec3e78d4e8a2f03279f5b220, type: 3}
     - target: {fileID: 1235306832383044425, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Name
-      value: Crafting Slot (Oak Planks)
+      value: Material slot (Oak Planks)
       objectReference: {fileID: 0}
     - target: {fileID: 1235306832383044438, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: m_Pivot.x
@@ -4123,6 +4183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 11400000, guid: f21340e3bf8e87f4ebabba902772d17c, type: 2}
     - target: {fileID: 1235306832383044439, guid: 794929e12f1b27548be9ae8d161c67d6, type: 3}
       propertyPath: craftingItem
       value: 

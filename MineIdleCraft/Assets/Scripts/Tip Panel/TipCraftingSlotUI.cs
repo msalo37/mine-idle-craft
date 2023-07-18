@@ -12,7 +12,7 @@ namespace TipPanel
 
         public void SetRecipeItem(RecipeItem recipeItem)
         {
-            icon.sprite = recipeItem.craftingItem.sprite;
+            icon.sprite = recipeItem.material.sprite;
             titleAmount.text = recipeItem.amount.ToString();
         }
     }
